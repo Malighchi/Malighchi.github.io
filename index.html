@@ -1,73 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rotating Cube</title>
-    <style type="text/css">
-      .cube-container {
-        perspective: 800px;
-        width: 200px;
-        height: 200px;
-        margin: 50px auto;
-      }
-      .cube {
-        position: relative;
-        transform-style: preserve-3d;
-        transform: rotateX(30deg) rotateY(45deg);
-        width: 100%;
-        height: 100%;
-        animation: rotate 6s linear infinite;
-      }
-      .face {
+    <title>Raining Dodecahedrons</title>
+    <style>
+      #dodecahedron-container {
         position: absolute;
-        width: 200px;
-        height: 200px;
-        opacity: 0.9;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
       }
-      .front {
-        background-color: #f00;
-        transform: translateZ(100px);
+
+      .dodecahedron {
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: raining 5s linear infinite;
       }
-      .back {
-        background-color: #0f0;
-        transform: rotateY(180deg) translateZ(100px);
-      }
-      .right {
-        background-color: #00f;
-        transform: rotateY(90deg) translateZ(100px);
-      }
-      .left {
-        background-color: #ff0;
-        transform: rotateY(-90deg) translateZ(100px);
-      }
-      .top {
-        background-color: #0ff;
-        transform: rotateX(90deg) translateZ(100px);
-      }
-      .bottom {
-        background-color: #f0f;
-        transform: rotateX(-90deg) translateZ(100px);
-      }
-      
-      @keyframes rotate {
-        0% {
-          transform: rotateX(0deg) rotateY(0deg);
+
+      @keyframes raining {
+        from {
+          transform: translateY(-100vh) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
         }
-        100% {
-          transform: rotateX(360deg) rotateY(360deg);
+        to {
+          transform: translateY(100vh) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
         }
       }
     </style>
   </head>
   <body>
-    <div class="cube-container">
-      <div class="cube">
-        <div class="face front"></div>
-        <div class="face back"></div>
-        <div class="face right"></div>
-        <div class="face left"></div>
-        <div class="face top"></div>
-        <div class="face bottom"></div>
-      </div>
-    </div>
+    <div id="dodecahedron-container"></div>
+
+    <script>
+      function createDodecahedron() {
+        const container = document.getElementById('dodecahedron-container');
+        const dodecahedron = document.createElement('div');
+        dodecahedron.classList.add('dodecahedron');
+        container.appendChild(dodecahedron);
+      }
+
+      for (let i = 0; i < 20; i++) {
+        createDodecahedron();
+      }
+
+      const dodecahedrons = document.querySelectorAll('.dodecahedron');
+      dodecahedrons.forEach((dodecahedron, index) => {
+        dodecahedron.style.backgroundColor = `hsl(${index * 18}, 80%, 50%)`;
+        dodecahedron.style.transform = `rotateX(${Math.random() * 360}deg) rotateY(${Math.random() * 360}deg) rotateZ(${Math.random() * 360}deg) translateZ(${Math.random() * 500}px)`;
+      });
+    </script>
   </body>
 </html>

@@ -1,130 +1,26 @@
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+#dodecahedron-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.dodecahedron {
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: raining 5s linear infinite;
+}
+
+@keyframes raining {
+  from {
+    transform: translateY(-100vh) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
-  
-  .shape {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    opacity: 0.8;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+  to {
+    transform: translateY(100vh) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
-  
-  .shape1 {
-    background-color: #f44336;
-    animation-name: move1;
-  }
-  
-  .shape2 {
-    background-color: #4caf50;
-    animation-name: move2;
-  }
-  
-  .shape3 {
-    background-color: #2196f3;
-    animation-name: move3;
-  }
-  
-  .shape4 {
-    background-color: #ffc107;
-    animation-name: move4;
-  }
-  
-  .shape5 {
-    background-color: #9c27b0;
-    animation-name: move5;
-  }
-  
-  .shape6 {
-    background-color: #795548;
-    animation-name: move6;
-  }
-  
-  .shape7 {
-    background-color: #00bcd4;
-    animation-name: move7;
-  }
-  
-  .shape8 {
-    background-color: #ff5722;
-    animation-name: move8;
-  }
-  
-  .shape9 {
-    background-color: #607d8b;
-    animation-name: move9;
-  }
-  
-  .shape10 {
-    background-color: #673ab7;
-    animation-name: move10;
-  }
-  
-  @keyframes move1 {
-    0% {
-      top: 0;
-      left: 0;
-    }
-    25% {
-      top: 0;
-      left: 80%;
-    }
-    50% {
-      top: 80%;
-      left: 80%;
-    }
-    75% {
-      top: 80%;
-      left: 0;
-    }
-    100% {
-      top: 0;
-      left: 0;
-    }
-  }
-  
-  @keyframes move2 {
-    0% {
-      top: 50%;
-      left: 50%;
-    }
-    25% {
-      top: 0;
-      left: 50%;
-    }
-    50% {
-      top: 50%;
-      left: 100%;
-    }
-    75% {
-      top: 100%;
-      left: 50%;
-    }
-    100% {
-      top: 50%;
-      left: 50%;
-    }
-  }
-  
-  @keyframes move3 {
-    0% {
-      top: 0;
-      left: 0;
-    }
-    25% {
-      top: 80%;
-      left: 0;
-    }
-    50% {
-      top: 80%;
-      left: 80%;
-    }
-    75% {
-      top:
-  
+}
