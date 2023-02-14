@@ -1,21 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Moving Shapes</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="shape shape1"></div>
-      <div class="shape shape2"></div>
-      <div class="shape shape3"></div>
-      <div class="shape shape4"></div>
-      <div class="shape shape5"></div>
-      <div class="shape shape6"></div>
-      <div class="shape shape7"></div>
-      <div class="shape shape8"></div>
-      <div class="shape shape9"></div>
-      <div class="shape shape10"></div>
-    </div>
-  </body>
+<head>
+	<title>My Moving Objects Page</title>
+	<style type="text/css">
+		.container {
+			position: relative;
+			width: 600px;
+			height: 600px;
+			background-color: #f2f2f2;
+		}
+
+		.object {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+		}
+
+		.object1 {
+			background-color: red;
+			animation-name: move1;
+		}
+
+		.object2 {
+			background-color: blue;
+			animation-name: move2;
+		}
+
+		.object3 {
+			background-color: green;
+			animation-name: move3;
+			transform: translateZ(-25px) rotateY(45deg);
+		}
+
+		.object4 {
+			background-color: yellow;
+			animation-name: move4;
+			transform: translateZ(-50px) rotateX(90deg);
+		}
+
+		.object5 {
+			background-color: purple;
+			animation-name: move5;
+			transform: translateZ(-25px) rotateY(135deg);
+		}
+
+		@keyframes move1 {
+			from { left: 0; top: 0; }
+			to { left: 500px; top: 500px; }
+		}
+
+		@keyframes move2 {
+			from { left: 500px; top: 0; }
+			to { left: 0; top: 500px; }
+		}
+
+		@keyframes move3 {
+			from { left: 250px; top: 0; }
+			to { left: 250px; top: 500px; }
+		}
+
+		@keyframes move4 {
+			from { left: 0; top: 250px; }
+			to { left: 500px; top: 250px; }
+		}
+
+		@keyframes move5 {
+			from { left: 500px; top: 250px; }
+			to { left: 0; top: 250px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="object object1"></div>
+		<div class="object object2"></div>
+		<div class="object object3"></div>
+		<div class="object object4"></div>
+		<div class="object object5"></div>
+	</div>
+</body>
 </html>
