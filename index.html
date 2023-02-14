@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Raining Dodecahedrons</title>
-    <style>
-      #dodecahedron-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-      }
-
-      .dodecahedron {
-        position: absolute;
-        transform-style: preserve-3d;
-        animation: raining 5s linear infinite;
-      }
-
-      @keyframes raining {
-        from {
-          transform: translateY(-100vh) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-        }
-        to {
-          transform: translateY(100vh) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-        }
-      }
-    </style>
+    <title>Falling Dodecahedrons</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div id="dodecahedron-container"></div>
-
-    <script>
-      function createDodecahedron() {
-        const container = document.getElementById('dodecahedron-container');
-        const dodecahedron = document.createElement('div');
-        dodecahedron.classList.add('dodecahedron');
-        container.appendChild(dodecahedron);
-      }
-
-      for (let i = 0; i < 20; i++) {
-        createDodecahedron();
-      }
-
-      const dodecahedrons = document.querySelectorAll('.dodecahedron');
-      dodecahedrons.forEach((dodecahedron, index) => {
-        dodecahedron.style.backgroundColor = `hsl(${index * 18}, 80%, 50%)`;
-        dodecahedron.style.transform = `rotateX(${Math.random() * 360}deg) rotateY(${Math.random() * 360}deg) rotateZ(${Math.random() * 360}deg) translateZ(${Math.random() * 500}px)`;
-      });
-    </script>
+    <div class="dodecahedron-container">
+      <div class="dodecahedron" style="background-color: #ff6f61;">
+        <div class="face face-1"></div>
+        <div class="face face-2"></div>
+        <div class="face face-3"></div>
+        <div class="face face-4"></div>
+        <div class="face face-5"></div>
+        <div class="face face-6"></div>
+        <div class="face face-7"></div>
+        <div class="face face-8"></div>
+        <div class="face face-9"></div>
+        <div class="face face-10"></div>
+        <div class="face face-11"></div>
+        <div class="face face-12"></div>
+      </div>
+      <div class="dodecahedron" style="background-color: #ffb347;">
+        <div class="face face-1"></div>
+        <div class="face face-2"></div>
+        <div class="face face-3"></div>
+        <div class="face face-4"></div>
+        <div class="face face-5"></div>
+        <div class="face face-6"></div>
+        <div class="face face-7"></div>
+        <div class="face face-8"></div>
+        <div class="face face-9"></div>
+        <div class="face face-10"></div>
+        <div class="face face-11"></div>
+        <div class="face face-12"></div>
+      </div>
+      <div class="dodecahedron" style="background-color: #ffff66;">
+        <div class="face face-1"></div>
+        <div class="face face-2"></div>
+        <div class="face face-3"></div>
+        <div class="face face-4"></div>
+        <div class="face face-5"></div>
+        <div class="face face-6"></div>
+        <div class="face face-7"></div>
+        <div class="face face-8"></div>
+        <div class="face face-9"></div>
+        <div class="face face-10"></div>
+        <div class="face face-11"></div>
+        <div class="face face-12"></div>
+      </div>
+      <div class="dodecahedron" style="background-color: #99ff99;">
+        <div class="face face-1"></div>
+        <div class="face face-2"></div>
+        <div class="face face-3"></div>
+        <div class="face face-4"></div>
+        <div class="face face-5"></div>
+        <div class="face face-6"></div>
+        <div class="face face-7"></div>
+        <div class="face face-8"></div>
+        <div class="face face-9"></div>
+        <div class="face face-10"></div>
+        <div class="face face-11"></div>
+        <div class="face face-12"></div>
+      </div>
+    </div>
   </body>
-</html>
+</html

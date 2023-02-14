@@ -1,4 +1,4 @@
-#dodecahedron-container {
+.dodecahedron-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,15 +12,44 @@
 
 .dodecahedron {
   position: absolute;
+  top: -50px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
   transform-style: preserve-3d;
-  animation: raining 5s linear infinite;
+  animation: falling-rotate 5s linear infinite;
 }
 
-@keyframes raining {
-  from {
-    transform: translateY(-100vh) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  }
-  to {
-    transform: translateY(100vh) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
-  }
+.dodecahedron:before,
+.dodecahedron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: #1a1a1a;
+  transform-style: preserve-3d;
 }
+
+.dodecahedron:before {
+  transform: translateZ(-25px) rotateY(54deg) rotateX(35deg);
+}
+
+.dodecahedron:after {
+  transform: translateZ(-25px) rotateY(-54deg) rotateX(35deg);
+}
+
+.dodecahedron .face {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #ff6f61;
+}
+
+.dodecahedron .face-1 {
+  transform: translateZ(25px) rotateX(-90deg);
+}
+
+.dodecahedron .face-2 {
+  transform: translateZ(25px) rotateY(-
