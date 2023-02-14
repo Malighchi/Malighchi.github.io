@@ -1,39 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>My Personal Website</title>
-    <meta name="description" content="This is my personal website">
-    <meta name="keywords" content="personal website, about me, portfolio">
-    <meta name="author" content="Your Name">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>John Doe - Personal Website</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>
-      <h1>Welcome to My Personal Website</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+    <!-- Header Section -->
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <h1>John Doe</h1>
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
-    <main>
-      <h2>About Me</h2>
-      <p>Hello! My name is Your Name and I'm a [profession/hobby]. I'm passionate about [interests] and love [activity]. On this website, you'll find my portfolio, blog, and more. Feel free to get in touch with me if you have any questions or would like to work together.</p>
-      <h2>My Portfolio</h2>
-      <p>Here are some of the projects I've worked on:</p>
-      <ul>
-        <li><a href="#">Project 1</a></li>
-        <li><a href="#">Project 2</a></li>
-        <li><a href="#">Project 3</a></li>
-      </ul>
-    </main>
-    <footer>
-      <p>&copy; 2023 Your Name. All rights reserved.</p>
-    </footer>
-  </body>
-</html>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Hi, my name is John Doe and I'm a freelance web developer based in San Francisco. I have over 5 years of experience in the field and have worked with a variety of clients, from startups to large corporations. I'm passionate about creating beautiful and functional websites that help businesses succeed.</p>
+            <p>When I'm not working, I enjoy hiking, photography, and spending time with my family.</p>
+          </div>
+          <div class="about-image">
+            <img src="profile.jpg" alt="John Doe">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2>My Services</h2>
+        <div class="services-content">
+          <div class="service">
+            <i
