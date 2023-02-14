@@ -107,12 +107,12 @@ body {
 
 @keyframes fall-rotate {
   0% {
-    transform: translate(0, -100px) rotateX(0deg);
+    transform: translate(-50%, -100px) rotateX(0deg);
   }
   50% {
-    transform: translate(0, 50vh) rotateX(180deg);
+    transform: translate(-50%, calc(50vh - 44px)) rotateX(180deg);
   }
   100% {
-    transform: translate(0, 100vh) rotateX(360deg);
+    transform: translate(-50%, calc(100vh - 88px)) rotateX(360deg);
   }
 }
