@@ -1,13 +1,15 @@
-body {
-  margin: 0;
-  padding: 0;
+.scene {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
-.dodecahedron-container {
+.rain {
   position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
 }
 
 .dodecahedron {
@@ -21,98 +23,37 @@ body {
   animation-duration: 3s;
   animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   animation-iteration-count: infinite;
+  z-index: 1;
 }
 
-.dodecahedron:nth-child(1) {
-  animation-delay: 0.5s;
-}
-
-.dodecahedron:nth-child(2) {
-  animation-delay: 1s;
-}
-
-.dodecahedron:nth-child(3) {
-  animation-delay: 1.5s;
-}
-
-.dodecahedron:nth-child(4) {
-  animation-delay: 2s;
-}
-
-.face {
+.dodecahedron::before {
+  content: "";
   position: absolute;
-  width: 88px;
-  height: 88px;
+  top: 0;
+  left: 0;
+  border: 20px solid transparent;
+  border-top: 20px solid #33FF99;
+  transform: rotateX(60deg) translateZ(25px);
 }
 
-.face-1 {
-  transform: translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-2 {
-  transform: rotateY(36deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-3 {
-  transform: rotateY(72deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-4 {
-  transform: rotateY(108deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-5 {
-  transform: rotateY(144deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-6 {
-  transform: rotateY(180deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-7 {
-  transform: rotateY(-144deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-8 {
-  transform: rotateY(-108deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-9 {
-  transform: rotateY(-72deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-10 {
-  transform: rotateY(-36deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-11 {
-  transform: rotateX(-72deg) rotateZ(54.735deg) translateZ(44px);
-  background-color: #ff6f61;
-}
-
-.face-12 {
-  transform: rotateX(72deg) rotateZ(54.735deg) translateZ(44px);
-  background-color: #ff6f61;
+.dodecahedron::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 20px solid transparent;
+  border-bottom: 20px solid #33FF99;
+  transform: rotateX(-60deg) translateZ(25px);
 }
 
 @keyframes fall-rotate {
   0% {
-    transform: translate(-50%, -100px) rotateX(0deg);
+    transform: translate3d(0, -100%, 0) rotateX(0deg) rotateY(0deg);
   }
   50% {
-    transform: translate(-50%, calc(50vh - 44px)) rotateX(180deg);
+    transform: translate3d(0, 100vh, 0) rotateX(720deg) rotateY(360deg);
   }
   100% {
-    transform: translate(-50%, calc(100vh - 88px)) rotateX(360deg);
+    transform: translate3d(0, 100vh, 0) rotateX(1440deg) rotateY(720deg);
   }
 }
