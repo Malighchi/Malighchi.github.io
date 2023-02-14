@@ -1,113 +1,113 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
 .dodecahedron-container {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 }
 
 .dodecahedron {
-  position: absolute;
-  top: -100px;
-  left: calc(50% - 50px);
-  width: 100px;
-  height: 88px;
-  transform-style: preserve-3d;
-  animation-name: fall-rotate;
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  animation-iteration-count: infinite;
+	position: absolute;
+	top: -100px;
+	left: calc(50% - 50px);
+	width: 100px;
+	height: 88px;
+	transform-style: preserve-3d;
+	animation-name: fall-rotate;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	animation-iteration-count: infinite;
 }
 
 .dodecahedron:nth-child(1) {
-  animation-delay: 0.5s;
+	animation-delay: 0.5s;
 }
 
 .dodecahedron:nth-child(2) {
-  animation-delay: 1s;
+	animation-delay: 1s;
 }
 
 .dodecahedron:nth-child(3) {
-  animation-delay: 1.5s;
+	animation-delay: 1.5s;
 }
 
 .dodecahedron:nth-child(4) {
-  animation-delay: 2s;
+	animation-delay: 2s;
 }
 
 .face {
-  position: absolute;
-  width: 88px;
-  height: 88px;
+	position: absolute;
+	width: 88px;
+	height: 88px;
 }
 
 .face-1 {
-  transform: translateZ(44px);
-  background-color: #ff6f61;
+	transform: translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-2 {
-  transform: rotateY(36deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(36deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-3 {
-  transform: rotateY(72deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(72deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-4 {
-  transform: rotateY(108deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(108deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-5 {
-  transform: rotateY(144deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(144deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-6 {
-  transform: rotateY(180deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(180deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-7 {
-  transform: rotateY(-144deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(-144deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-8 {
-  transform: rotateY(-108deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(-108deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-9 {
-  transform: rotateY(-72deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(-72deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-10 {
-  transform: rotateY(-36deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateY(-36deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-11 {
-  transform: rotateX(-72deg) rotateZ(54.735deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateX(-72deg) rotateZ(54.735deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 .face-12 {
-  transform: rotateX(72deg) rotateZ(54.735deg) translateZ(44px);
-  background-color: #ff6f61;
+	transform: rotateX(72deg) rotateZ(54.735deg) translateZ(44px);
+	background-color: #ff6f61;
 }
 
 @keyframes fall-rotate {
-  0% {
-    transform: translate(0, -100px) rotateX(0deg);
-  }
-  50% {
-    transform: translate(0, calc(100vh + 100px)) rotateX(360deg);
-  }
-  100% {
-    transform: translate(0, -100px) rotateX(720deg);
-  }
-}
+	0% {
+		transform: translate(0, -100px) rotateX(0deg);
+	}
+	50% {
+		transform: translate
